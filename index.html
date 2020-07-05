@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript on Earth</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="locations">
+        <div onclick="displayLocationElevation({lat:28.615,lng:-80.6945})">Nasa LLF</div>
+        <div onclick="displayLocationElevation({lat:28.5728825, lng:-80.6517341})">Kennedy Space Center</div>
+       
+        <div id="current">
+            <h3>Current</h3>
+            <div id="current-temperature">Temp: 0°C</div>
+            <div id="current-humidity">Humidty:0%</div>
+            <div id="current-clouds">Clouds: 0%</div>
+            <div id="current-wind">Wind: 0m/s 0°</div>
+        </div>
+    </div>
+    <h1>Choose your location and time of arrival please</h2>
+    <div id="hourly">
+    </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ADhyHCHzYtkO7UicXXnUbIFypykn8yU&callback=initMap">
+    </script>
+</body>
+
+</html>
